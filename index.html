@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Costos Automotrices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-register-container" id="loginRegisterContainer">
+        <div class="login-container" id="loginContainer">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <input type="text" id="loginUsername" placeholder="Usuario" required>
+                <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                <button type="submit">Ingresar</button>
+            </form>
+            <p>¿No tienes una cuenta? <a href="#" id="showRegister">Regístrate</a></p>
+        </div>
+        <div class="register-container" id="registerContainer">
+            <h2>Registro</h2>
+            <form id="registerForm">
+                <input type="text" id="registerUsername" placeholder="Usuario" required>
+                <input type="password" id="registerPassword" placeholder="Contraseña" required>
+                <button type="submit">Registrar</button>
+            </form>
+            <p>¿Ya tienes una cuenta? <a href="#" id="showLogin">Inicia Sesión</a></p>
+        </div>
+    </div>
+
+    <div class="calculator-container" id="calculatorContainer" style="display:none;">
+        <h1>Calculadora de Costos Automotrices</h1>
+        <div class="vehicle-selection">
+            <select id="vehicleCountry">
+                <option value="" disabled selected>Elija un país</option>
+                <option value="japoneses">Japoneses</option>
+                <option value="americanos">Americanos</option>
+                <option value="alemanes">Alemanes</option>
+                <option value="ingleses">Ingleses</option>
+                <option value="italianos">Italianos</option>
+            </select>
+            <select id="vehicleBrand">
+                <option value="" disabled selected>Elija una marca</option>
+            </select>
+            <select id="vehicleModel">
+                <option value="" disabled selected>Elija un modelo</option>
+            </select>
+            <select id="vehicleTransmission">
+                <option value="" disabled selected>Elija la transmisión</option>
+                <option value="automatica">Automática</option>
+                <option value="manual">Manual</option>
+            </select>
+        </div>
+
+        <div class="service-selection">
+            <h2>Seleccione los servicios</h2>
+            <div>
+                <input type="checkbox" id="cambioAceiteMotor"> Cambio de Aceite de Motor
+            </div>
+            <div>
+                <input type="checkbox" id="cambioAceiteTransmision"> Cambio de Aceite de Transmisión
+            </div>
+            <div>
+                <input type="checkbox" id="cambioFiltrosAire"> Cambio de Filtros de Aire
+            </div>
+            <div>
+                <input type="checkbox" id="mantenimientoFrenos"> Mantenimiento de Frenos
+            </div>
+            <div>
+                <input type="checkbox" id="reparacionTransmisionAutomatica"> Reparación de Transmisión Automática
+            </div>
+            <div>
+                <input type="checkbox" id="revision"> Revisión
+            </div>
+        </div>
+
+        <button id="calculateButton">Calcular</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="login.js"></script>
+    <script src="register.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
